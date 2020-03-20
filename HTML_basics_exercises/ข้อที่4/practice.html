@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="date"></title>
+</head>
+
+<body>
+
+<p>When was this webpage created? Check page's title for the answer.</p>
+
+<script>
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+</script>
+</body>
+</html>
