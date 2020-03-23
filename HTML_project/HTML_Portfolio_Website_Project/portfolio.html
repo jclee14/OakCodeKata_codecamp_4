@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supawit Charoenwetch | Portfolio</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+    body {
+        margin: 0;
+    }
+    h1 {
+        font-size: 5rem;
+        margin: 0;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    #nav-list {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+        overflow: hidden;
+    }
+    #nav-list li {
+        float: left;
+    }
+    #nav-list li a {
+        padding: 10px;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    #nav-list li a:hover {
+        background-color: orange;
+        color: white;
+    }
+    #welcome-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: orange;
+    }
+    #welcome-section p {
+        font-size: 1.5rem;
+    }
+    #projects {
+        padding: 5vh 0 10vh;
+    }
+    #projects-header {
+        text-align: center;
+    }
+    #projects-flex {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .project-tile {
+        width: 30vw;
+        height: 30vw;
+        text-align: center;
+        margin: 10px;
+        background-color: orange;
+    }
+    .project-tile img {
+        object-fit: cover;
+        width: 100%;
+        height: 75%;
+    }
+    .project-tile a {
+        text-decoration: none;
+        color: black;
+        font-size: 2vw;
+        font-weight: 600;
+    }
+    .project-tile a:hover {
+        color: white;
+    }
+    .active {
+        background-color: orange;
+        color: white;
+    }
+    #contact-section {
+        text-align: center;
+        padding: 15vh 0;
+        background-color: orange;
+    }
+    #contact-header h3 {
+        margin: 0;
+    }
+    #contact-header p {
+        font-size: 25px;
+    }
+    #contact-link {
+        margin-top: 5vh;
+        font-size: 2rem;
+        background-color: white;
+        margin: 0 25%;
+    }
+    #contact-link a {
+        text-decoration: none;
+        color: black;
+    }
+    #contact-link a:hover {
+        color: orange;
+    }
+</style>
+</head>
+
+<body>
+<nav id="navbar">
+    <ul id="nav-list">
+        <li>
+            <a href="#welcome-section">Welcome</a>
+        </li>
+        <li>
+            <a href="#projects">Project</a>
+        </li>
+        <li>
+            <a href="#contact-section">Contact</a>
+        </li>
+    </ul>
+</nav>
+<div id="welcome-section">
+    <h1>Hello World!</h1>
+    <p>Welcome to J.C. Lee Portfolio</p>
+</div>
+<div id="projects">
+    <div id="projects-header">
+        <h2>My Life Projects</h2>
+    </div>
+    <div id="projects-flex">
+        <div class="project-tile">
+            <a href="https://www.liverpoolfc.com/" target="_blank">
+                <img src="https://www.matichon.co.th/wp-content/uploads/2019/09/GettyImages-1148307968-2.jpg" alt="project1-img" />
+                <p>Liverpool FC</p>
+            </a>
+        </div>
+        <div class="project-tile">
+            <a href="https://www.akb48.co.jp/" target="_blank">
+                <img src="https://www.neowing.co.jp/pictures/l/02/32/KIZM-639.jpg" alt="project2-img" />
+                <p>AKB48</p>
+            </a>
+        </div>
+        <div class="project-tile">
+            <a href="https://www.kfc.co.th/" target="_blank">
+                <img src="https://www.kfc.com.au/sites/default/files/alohadata/images/categories/submenu_20000_web_thumb.jpg" alt="project3-img" />
+                <p>Kentucky Fried Chicken</p>
+            </a>
+        </div>
+        <div class="project-tile">
+            <a href="https://www.wizardingworld.com/" target="_blank">
+                <img src="https://fr.web.img3.acsta.net/newsv7/20/01/30/17/05/5889337.jpg" alt="project4-img" />
+                <p>Harry Potter</p>
+            </a>
+        </div>
+        <div class="project-tile">
+            <a href="https://www.codecampthailand.com/" target="_blank">
+                <img src="https://www.codecampthailand.com/wp-content/uploads/2020/03/Pro2-300x300.png" alt="project5-img" />
+                <p>Thailand Code Camp</p>
+            </a>
+        </div>
+        <div class="project-tile">
+            <a href="http://www.soccersuck.com/" target="_blank">
+                <img src="https://m.thaiware.com/upload_misc/software/2015_10/728/5245_151027111612BS.png" alt="project6-img" />
+                <p>Soccer Suck</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="contact-section">
+    <div id="contact-header">
+        <h3>Looking forward to hear from you!</h3>
+        <p>Connect me now!</p>
+    </div>
+    <div id="contact-link">
+        <a id="profile-link" href="https://github.com/jclee14" target="_blank">GitHub</a>
+        <span>|</span>
+        <a href="https://www.jiaclee.com/" target="_blank">Portfolio</a>
+        <span>|</span>
+        <a href="mailto:jiapsuic@gmail.com">Email</a>
+    </div>
+</div>
+
+</body>
+</html>
