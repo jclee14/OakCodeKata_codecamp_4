@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice1</title>
+</head>
+
+<body>
+
+<h1>Create an Account</h1>
+<br />
+
+<form action="/action_page.php">
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email">
+    <br/><br/>
+    <label for="pword">Password:</label><br>
+    <input type="password" id="pword" name="pword">
+    <br/><br/>
+    <label for="age">Age:</label><br>
+    <select id="age">
+        <option value="" disabled selected>Select Age</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+    </select>
+    <br/><br/>
+    <label for="txtArea">Tell us a little about yourself:</label><br/>
+    <textarea id="txtArea" rows="4" cols="50"></textarea>
+    <br/><br/>
+    <input type="checkbox" id="agreement" name="agreement" value="agree">
+    <label for="agreement"> I agree to the <a href="https://policies.google.com/terms?hl=en-US" target="_blank">terms of service</a></label><br>
+    <br/>
+    <input type="submit" value="Sign up" />
+</form>
+
+</body>
+</html>
