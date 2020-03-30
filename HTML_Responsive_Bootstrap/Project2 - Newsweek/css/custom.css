@@ -176,6 +176,16 @@ h3 {
 	width: 100%;
 }
 
+@media screen and (max-width: 991px) {
+    header.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+}
+
 .header-top {
 	position: relative;
 	z-index: 2;
@@ -300,6 +310,36 @@ h3 {
     margin: 0;
 }
 
+@media screen and (max-width: 991px) {
+    #weather {
+        top: 5px;
+        left: 170px;
+    }
+    #weather.api {
+        top: 8px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    #weather header, #weather.api .weather-country {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    #header-top-left {
+        display: none;
+    }
+    #header-top-right {
+        position: absolute;
+        top: 12px;
+        right: 80px;
+    }
+}
+
+
 .header-middle {
 	position: relative;
 	padding: 15px;
@@ -401,11 +441,214 @@ form#search-block-form input[type="text"] {
 	font-size: 16px;
 }
 
+@media screen and (max-width: 991px) {
+    .header-bottom {
+        display: none;
+    }
+}
+
+.genericon-menu {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .genericon-menu {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 481px) {
+    .genericon-menu {
+        width: 74px;
+    }
+}
+
+.genericon-menu>span {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.genericon-menu::before, .genericon-menu::after {
+    content: "";
+}
+
+.genericon-menu>span, .genericon-menu::before, .genericon-menu::after {
+    display: block;
+    width: 24px;
+    height: 4px;
+    background-color: #fb9a94;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 481px) {
+    .genericon-menu>span, .genericon-menu::before, .genericon-menu::after {
+        width: 30px;
+    }
+}
+
+/* The sidebar menu */
+
+.sidebar {
+    height: 100vh; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Stay on top */
+    top: 50px;
+    right: 0;
+    background-color: white; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+  
+/* The sidebar links */
+.sidebar a {
+    position: relative;
+	font-size: 19px;
+	line-height: 24px;
+    font-weight: bold;
+    font-family: "Roboto Condensed",sans-serif;
+    color: black;
+    padding: 5px 15px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+  
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+  
+.openbtn:hover {
+    background-color: #444;
+}
+  
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
+  
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+#sidebar-form {
+    position: relative;
+    padding-right: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+#sidebar-form input[type="text"] {
+    color: rgba(0,0,0,.55);
+    background-color: white;
+    border: none;
+}
+
+#sidebar-form input[type="text"] {
+    top: 0;
+    font-size: 16px;
+    height: 20px;
+    width: 175px;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar-form input {
+    vertical-align: middle;
+}
+
+#sidebar-form input[type="text"]:focus{
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#sidebar-form .element-invisible {
+    background: url(https://g.newsweek.com/www/images/icon-search-glass.svg) center/contain no-repeat white;
+    width: 20px;
+    height: 20px;
+    clip: auto;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 991px) {
+    #mySidebar a:not(:first-of-type)::after {
+        background-color: rgba(0,0,0,.55);
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    #mySidebar a:not(:first-of-type)::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 8px;
+        height: 14px;
+        -webkit-mask-image: url(https://g.newsweek.com/www/images/icon-arrow-right.svg);
+        mask-image: url(https://g.newsweek.com/www/images/icon-arrow-right.svg);
+        margin-left: 10px;
+        position: absolute;
+        right: 15px;
+        top: 12px;
+    }
+}
+
+
 /* Main Section */
 #main-section {
     background-color: white;
     padding-top: 20px;
 }
+
+@media screen and (max-width: 991px) {
+    #main-section {
+        padding-top: 70px;
+    }
+}
+
 .feature .block-title {
     color: rgba(3,3,3,.4);
 }
@@ -452,6 +695,10 @@ form#search-block-form input[type="text"] {
 
 .image a {
 	display: block;
+}
+
+.image img {
+    width: 100%;
 }
 
 #block-featured-stories .related {

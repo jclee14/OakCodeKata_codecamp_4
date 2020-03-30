@@ -64,12 +64,12 @@
 
 <body>
 	<div class="container">
-		<header id="header-section">
+		<header id="header-section" class="fixed">
 			<div class="header-top flex-xs jc-sb ai-fe">
-				<div class="col-6">
+				<div id="header-top-left" class="col-6">
 					<date>Sat, Mar 28, 2020</date>
 				</div>
-				<div class="col-6 flex-xs ai-c jc-fe">
+				<div id="header-top-right" class="col-6 flex-xs ai-c jc-fe">
 					<a id="auth" class="lk-2" href="#">Sign In</a>
 					<a class="lk-3" href="#">Subscribe
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -119,12 +119,32 @@
 						</g>
 					</svg>
 				</a>
+				<span class="genericon genericon-menu" onclick="openNav()"><span></span></span>
+			</div>
+			<div id="mySidebar" class="sidebar">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<form id="sidebar-form" action="/action_page.php">
+					<label class="element-invisible" for="edit-search-block-form--4">Search </label>
+					<input title="Enter the terms you wish to search for." class="form-control" type="text" placeholder="Search">
+				</form>
+				<a class="text-nowrap" href="#">U.S.</a>
+				<a class="text-nowrap" href="#">World</a>
+				<a class="text-nowrap" href="#">Business</a>
+				<a class="text-nowrap" href="#">Tech & Science</a>
+				<a class="text-nowrap" href="#">Culture</a>
+				<a class="text-nowrap" href="#">Newsgeek</a>
+				<a class="text-nowrap" href="#">Sports</a>
+				<a class="text-nowrap" href="#">Health</a>
+				<a class="text-nowrap" href="#">The Debate</a>
+				<a class="text-nowrap" href="#">Vantage</a>
+				<a class="text-nowrap" href="#">Weather</a>
+				</ul>
 			</div>
 			<nav class="header-bottom navbar navbar-expand-md">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<!-- 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
 					<ul class="navbar-nav mr-auto page-nav nav-justified">
 						<li class="nav-link nav-item"><a class="text-nowrap" href="#" title="">U.S.</a></li>
 						<li class="nav-link nav-item"><a class="text-nowrap" href="#" title="">World</a></li>
@@ -143,108 +163,14 @@
 							placeholder="Search">
 						<i class="fas fa-search form-icon"></i>
 					</form>
-				</div>
+<!-- 				</div> -->
 			</nav>
 		</header>
 		<div id="main-section" class="container-fluid">
 			<div class="colwrap row sticky-scroll">
-				<div class="col-8">
+				<div class="col-lg-8">
 					<div class="row">
-						<div class="col-5 feature">
-							<div id="block-featured-stories">
-								<div class="feature">
-									<div class="block-title">FEATURED STORIES</div>
-									<article>
-										<div class="wrap">
-											<div class="category">
-												<a href="#">U.S.</a>
-											</div>
-											<div class="image">
-												<a href="#">
-													<picture width="397" height="265" class="mapping-sm_md"
-														style="padding-bottom: 66.7506%;">
-														<img src="https://d.newsweek.com/en/full/1576741/job-seekers-outside-career-fair-amid-recession.jpg?w=397&amp;h=265&amp;q=90&amp;f=43189c0772b591d102fce8f6f2e097e1"
-															alt="Job Seekers Outside Career Fair Amid Recession"
-															title="Job Seekers Outside Career Fair Amid Recession"
-															width="397" height="265" class="mapping-sm_md"
-															style="position: absolute;" />
-													</picture>
-												</a>
-											</div>
-										</div>
-										<h3>
-											<a href="#">As
-												Jobless Claims Surge by 3 Million, Unemployment May Hit Post-Crash Peak
-											</a>
-										</h3>
-										<div class="summary">
-											The Department of Labor revealed that initial jobless claims rose by 3.3
-											million
-											last week as business were shut down by the coronavirus pandemic.
-										</div>
-										<ul class="related">
-											<li>
-												<a href="#" itemprop="relatedLink">Here Are Seven Things to Do if You
-													Lose Your Job
-												</a>
-											</li>
-										</ul>
-									</article>
-									<article>
-										<div class="wrap">
-											<div class="category"><a href="#">Politics</a></div>
-											<div class="image">
-												<a href="#">
-													<picture width="397" height="265" class="mapping-sm_md"
-														style="padding-bottom: 66.7506%;">
-														<img data-src="https://d.newsweek.com/en/full/1576251/donald-trump-coronavirus-approval-rating-poll.jpg?w=397&amp;h=265&amp;l=57&amp;t=58&amp;q=90&amp;f=8f17fce29ddf8ed04fd6076939e9f511"
-															alt="donald trump coronavirus approval rating poll "
-															title="donald trump coronavirus approval rating poll "
-															width="397" height="265" class="mapping-sm_md"
-															style="position: absolute;"
-															src="https://d.newsweek.com/en/full/1576251/donald-trump-coronavirus-approval-rating-poll.jpg?w=397&amp;h=265&amp;l=57&amp;t=58&amp;q=90&amp;f=8f17fce29ddf8ed04fd6076939e9f511">
-													</picture>
-												</a></div>
-										</div>
-										<h3>
-											<a href="#">Trump
-												Campaign Shelves 2020 Ad Blitz Touting Economy Because of
-												Coronavirus</a></h3>
-										<div class="summary">2020 has become the COVID-19 Election. How President Donald
-											Trump
-											handles the crisis—and how he is perceived to handle it—will likely
-											determine
-											whether he is re-elected.</div>
-									</article>
-									<article>
-										<div class="wrap">
-											<div class="category"><a href="#">U.S.</a></div>
-											<div class="image">
-												<a href="#">
-													<picture width="397" height="265" class="mapping-sm_md"
-														style="padding-bottom: 66.7506%;">
-														<img data-src="https://d.newsweek.com/en/full/1577239/bernie-sanders-rally-los-angeles-convention-center.jpg?w=397&amp;h=265&amp;q=90&amp;f=e19f65bf76fd0ffa68abc610734ae91c"
-															alt="Bernie Sanders rally Los Angeles Convention Center"
-															title="Bernie Sanders rally Los Angeles Convention Center"
-															width="397" height="265" class="mapping-sm_md"
-															style="position: absolute;"
-															src="https://d.newsweek.com/en/full/1577239/bernie-sanders-rally-los-angeles-convention-center.jpg?w=397&amp;h=265&amp;q=90&amp;f=e19f65bf76fd0ffa68abc610734ae91c">
-													</picture>
-												</a></div>
-										</div>
-										<h3>
-											<a href="#">Millions of
-												Americans
-												Could Have Coronavirus, Survey Reveals </a></h3>
-										<div class="summary">The study shows younger people are more likely than older
-											Americans to come
-											into
-											contact with infected individuals.</div>
-									</article>
-								</div>
-							</div>
-						</div>
-						<div class="col-7 feature">
+						<div class="col-md-7 order-md-2 feature">
 							<div id="block-featured-story">
 								<div class="feature">
 									<div class="block-title">Top Story</div>
@@ -388,9 +314,103 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-md-5 order-md-1 feature">
+							<div id="block-featured-stories">
+								<div class="feature">
+									<div class="block-title">FEATURED STORIES</div>
+									<article>
+										<div class="wrap">
+											<div class="category">
+												<a href="#">U.S.</a>
+											</div>
+											<div class="image">
+												<a href="#">
+													<picture width="397" height="265" class="mapping-sm_md"
+														style="padding-bottom: 66.7506%;">
+														<img src="https://d.newsweek.com/en/full/1576741/job-seekers-outside-career-fair-amid-recession.jpg?w=397&amp;h=265&amp;q=90&amp;f=43189c0772b591d102fce8f6f2e097e1"
+															alt="Job Seekers Outside Career Fair Amid Recession"
+															title="Job Seekers Outside Career Fair Amid Recession"
+															width="397" height="265" class="mapping-sm_md"
+															style="position: absolute;" />
+													</picture>
+												</a>
+											</div>
+										</div>
+										<h3>
+											<a href="#">As
+												Jobless Claims Surge by 3 Million, Unemployment May Hit Post-Crash Peak
+											</a>
+										</h3>
+										<div class="summary">
+											The Department of Labor revealed that initial jobless claims rose by 3.3
+											million
+											last week as business were shut down by the coronavirus pandemic.
+										</div>
+										<ul class="related">
+											<li>
+												<a href="#" itemprop="relatedLink">Here Are Seven Things to Do if You
+													Lose Your Job
+												</a>
+											</li>
+										</ul>
+									</article>
+									<article>
+										<div class="wrap">
+											<div class="category"><a href="#">Politics</a></div>
+											<div class="image">
+												<a href="#">
+													<picture width="397" height="265" class="mapping-sm_md"
+														style="padding-bottom: 66.7506%;">
+														<img data-src="https://d.newsweek.com/en/full/1576251/donald-trump-coronavirus-approval-rating-poll.jpg?w=397&amp;h=265&amp;l=57&amp;t=58&amp;q=90&amp;f=8f17fce29ddf8ed04fd6076939e9f511"
+															alt="donald trump coronavirus approval rating poll "
+															title="donald trump coronavirus approval rating poll "
+															width="397" height="265" class="mapping-sm_md"
+															style="position: absolute;"
+															src="https://d.newsweek.com/en/full/1576251/donald-trump-coronavirus-approval-rating-poll.jpg?w=397&amp;h=265&amp;l=57&amp;t=58&amp;q=90&amp;f=8f17fce29ddf8ed04fd6076939e9f511">
+													</picture>
+												</a></div>
+										</div>
+										<h3>
+											<a href="#">Trump
+												Campaign Shelves 2020 Ad Blitz Touting Economy Because of
+												Coronavirus</a></h3>
+										<div class="summary">2020 has become the COVID-19 Election. How President Donald
+											Trump
+											handles the crisis—and how he is perceived to handle it—will likely
+											determine
+											whether he is re-elected.</div>
+									</article>
+									<article>
+										<div class="wrap">
+											<div class="category"><a href="#">U.S.</a></div>
+											<div class="image">
+												<a href="#">
+													<picture width="397" height="265" class="mapping-sm_md"
+														style="padding-bottom: 66.7506%;">
+														<img data-src="https://d.newsweek.com/en/full/1577239/bernie-sanders-rally-los-angeles-convention-center.jpg?w=397&amp;h=265&amp;q=90&amp;f=e19f65bf76fd0ffa68abc610734ae91c"
+															alt="Bernie Sanders rally Los Angeles Convention Center"
+															title="Bernie Sanders rally Los Angeles Convention Center"
+															width="397" height="265" class="mapping-sm_md"
+															style="position: absolute;"
+															src="https://d.newsweek.com/en/full/1577239/bernie-sanders-rally-los-angeles-convention-center.jpg?w=397&amp;h=265&amp;q=90&amp;f=e19f65bf76fd0ffa68abc610734ae91c">
+													</picture>
+												</a></div>
+										</div>
+										<h3>
+											<a href="#">Millions of
+												Americans
+												Could Have Coronavirus, Survey Reveals </a></h3>
+										<div class="summary">The study shows younger people are more likely than older
+											Americans to come
+											into
+											contact with infected individuals.</div>
+									</article>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-lg-4">
 					<div id="block-opinion">
 						<div class="feature subfeature">
 							<div class="block-title">
@@ -679,6 +699,20 @@
 			</div>
 		</div>
 	</div>
+
+<script>
+	/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+	function openNav() {
+	document.getElementById("mySidebar").style.width = "220px";
+	document.getElementById("main").style.marginLeft = "250px";
+	}
+
+	/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+	function closeNav() {
+	document.getElementById("mySidebar").style.width = "0";
+	document.getElementById("main").style.marginLeft = "0";
+	}
+	</script>
 </body>
 
 </html>
