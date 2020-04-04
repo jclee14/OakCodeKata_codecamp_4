@@ -1,0 +1,257 @@
+<% layout('template') -%>
+
+<div id="main-section" class="container-fluid">
+  <div class="colwrap row sticky-scroll">
+    <div class="col-lg-8">
+      <div class="row">
+        <div class="col-md-7 order-md-2 feature">
+          <div id="block-featured-story">
+            <div class="feature">
+              <div class="block-title">Top Story</div>
+              <article>
+                <div class="wrap">
+                  <div class="category"><a href="#"><%= data.topStory.news.tags[0].name %></a></div>
+                  <div class="image">
+                    <a href="/news/<%= data.topStory.news.id %>">
+                      <picture width="591" height="364" class="mapping-md"
+                        style="padding-bottom: 61.5905%;">
+                        <img src="<%= data.topStory.image.url %>"
+                          alt="JOE BIDEN" title="JOE BIDEN" width="591" height="364"
+                          class="mapping-md" style="position: absolute;">
+                      </picture>
+                    </a></div>
+                </div>
+                <h1 class="h2"><a href="/news/<%= data.topStory.news.id %>">
+                  <%= data.topStory.news.topic %>
+                </a></h1>
+                <div class="summary">
+                  <%= data.topStory.news.summary %>
+                </div>
+                <div id="block-featured-related" class="block block-nw">
+                  <div class="content">
+                    <div class="feature">
+                      <article class="clearfix">
+                        <div class="image">
+                          <a href="/news/<%= data.topStory.relatedNews.id %>">
+                            <picture width="95" height="95" class="mapping-sm_thumb"
+                              style="padding-bottom: 100%;">
+                              <img src="<%= data.topStory.relatedImage.url %>"
+                                alt="US-POLITICS-VOTE-DEMOCRATS-DEBATE"
+                                title="US-POLITICS-VOTE-DEMOCRATS-DEBATE"
+                                class="mapping-sm_thumb"
+                                loading="lazy"
+                                style="position: absolute; height: 100%; width: auto; max-width: none;"
+                              >
+                            </picture>
+                          </a></div>
+                        <h4><a href="/news/<%= data.topStory.relatedNews.id %>">
+                          <%= data.topStory.relatedNews.topic %>
+                        </a></h4>
+                        <div class="summary">
+                          <%= data.topStory.relatedNews.summary %>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="culture-stories order-2">
+            <div class="block-title">
+              <a href="#">Culture &amp; Travel</a></div>
+            <div class="culture-items flex-sm">
+              <% for (let i = 0 ; i < data.cultureColumn.news.length ; i++) { %>
+              <div class="culture-item">
+                <div class="image">
+                  <a href="/news/<%= data.cultureColumn.news[i].id %>">
+                    <picture width="397" height="397" style="padding-bottom: 100%;">
+                      <img data-src="<%= data.cultureColumn.image[i].url %>"
+                        alt="Locked Down in Italy Playing Music "
+                        title="Locked Down in Italy Playing Music "
+                        style="position: absolute; height: 100%; width: auto; max-width: none;"
+                        src="<%= data.cultureColumn.image[i].url %>">
+                    </picture>
+                  </a>
+                  <div class="tags"><a href="#" class="active"><%= data.cultureColumn.news[i].tags[0].name %></a></div>
+                </div>
+                <div class="info">
+                  <div class="title">
+                    <a href="/news/<%= data.cultureColumn.news[i].id %>"><%= data.cultureColumn.news[i].topic %></a>
+                  </div>
+                  <div class="summary"><%= data.cultureColumn.news[i].summary %></div>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 order-md-1 feature">
+          <div id="block-featured-stories">
+            <div class="feature">
+              <div class="block-title">FEATURED STORIES</div>
+              <% for (let i = 0 ; i < data.featuredStory.news.length ; i ++) { %>
+              <article>
+                <div class="wrap">
+                  <div class="category">
+                    <a href="#"><%= data.featuredStory.news[i].tags[0].name %></a>
+                  </div>
+                  <div class="image">
+                    <a href="/news/<%= data.featuredStory.news[i].id %>">
+                      <picture width="397" height="265" class="mapping-sm_md"
+                        style="padding-bottom: 66.7506%;">
+                        <img src="<%= data.featuredStory.image[i].url %>"
+                          alt="Job Seekers Outside Career Fair Amid Recession"
+                          title="Job Seekers Outside Career Fair Amid Recession"
+                          width="397" height="265" class="mapping-sm_md"
+                          style="position: absolute;" />
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <h3>
+                  <a href="/news/<%= data.featuredStory.news[i].id %>">
+                    <%= data.featuredStory.news[i].topic %>
+                  </a>
+                </h3>
+                <div class="summary">
+                  <%= data.featuredStory.news[i].summary %>
+                </div>
+              </article>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div id="block-opinion">
+        <div class="feature subfeature">
+          <div class="block-title">
+            <a href="#">OPINION</a>
+          </div>
+          <ul>
+            <% for (let i = 0; i < data.opinionNews.news.length ; i++) { %>
+              <li class="flex-xs">
+                <div class="image headshot">
+                  <a href="#">
+                    <picture width="63" height="63" style="padding-bottom: 100%;">
+                      <img data-src="<%= data.opinionNews.news[i].author.image %>"
+                        alt="Bonnie Kristian" title="Bonnie Kristian" width="63" height="63"
+                        class="lazyloaded" style="position: absolute;"
+                        src="<%= data.opinionNews.news[i].author.image %>">
+                    </picture>
+                  </a></div>
+                <div class="info">
+                  <a href="/news/<%= data.opinionNews.news[i].id %>">
+                    <%= data.opinionNews.news[i].topic %>
+                  </a>
+                  <div class="byline"> By
+                    <%= data.opinionNews.news[i].author.name %></div>
+                </div>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+        <div class="the-debate">
+          <div class="subfeature">
+            <div class="block-title">
+              <a href="#">The debate</a></div>
+            <div class="debate-item c-r">
+              <div class="flex-xs ai-c">
+                <div class="image">
+                  <a href="/news/<%= data.debateNews.news[0].id %>">
+                    <picture width="95" height="95" class="mapping-small"
+                      style="padding-bottom: 100%;">
+                      <img data-src="<%= data.debateNews.image[0].url %>"
+                        alt="Joe Biden " title="Joe Biden " width="95" height="95"
+                        class="lazyloaded"
+                        style="position: absolute; height: 100%; width: auto; max-width: none;"
+                        src="<%= data.debateNews.image[0].url %>">
+                    </picture>
+                  </a></div>
+                <div class="info"><a href="/news/<%= data.debateNews.news[0].id %>">
+                  <%= data.debateNews.news[0].topic %>
+                </a></div>
+              </div>
+              <div class="byline flex-xs ai-c">
+                <div class="f1"> <span>By</span>
+                  <a href="#" rel="author" class="author-name"><%= data.debateNews.news[0].author.name %></a></div>
+                <div class="fn image headshot">
+                  <a href="#">
+                    <picture width="63" height="63" style="padding-bottom: 100%;">
+                      <img data-src="<%= data.debateNews.news[0].author.image %>"
+                        alt="<%= data.debateNews.news[0].author.name %>" title="<%= data.debateNews.news[0].author.name %>" width="150" height="150"
+                        class="lazyloaded" style="position: absolute;"
+                        src="<%= data.debateNews.news[0].author.image %>">
+                    </picture>
+                  </a></div>
+              </div>
+            </div>
+            <div class="c-vs">VS</div>
+            <div class="debate-item c-b">
+              <div class="flex-xs ai-c">
+                <div class="image">
+                  <a href="/news/<%= data.debateNews.news[1].id %>">
+                    <picture width="95" height="95" class="mapping-small"
+                      style="padding-bottom: 100%;">
+                      <img data-src="<%= data.debateNews.image[1].url %>"
+                        alt="Joe Biden and Bernie Sanders"
+                        title="Joe Biden and Bernie Sanders" width="95" height="95"
+                        class="lazyloaded"
+                        style="position: absolute; height: 100%; width: auto; max-width: none;"
+                        src="<%= data.debateNews.image[1].url %>">
+                    </picture>
+                  </a></div>
+                <div class="info"><a href="/news/<%= data.debateNews.news[1].id %>">
+                  <%= data.debateNews.news[1].topic %>
+                </a></div>
+              </div>
+              <div class="byline flex-xs ai-c">
+                <div class="f1"> <span>By</span>
+                  <%= data.debateNews.news[1].author.name %>
+                </div>
+                <div class="fn image headshot">
+                  <a href="#">
+                    <picture width="63" height="63" style="padding-bottom: 100%;">
+                      <img data-src="<%= data.debateNews.news[1].author.image %>"
+                        alt="<%= data.debateNews.news[1].author.name %> " title="<%= data.debateNews.news[1].author.name %> " width="150"
+                        height="150" class="lazyloaded" style="position: absolute;"
+                        src="<%= data.debateNews.news[1].author.image %>">
+                    </picture>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="block-subfeatured">
+        <div class="feature subfeature">
+          <div class="block-title">
+            <a href="#">LATEST NEWS</a>
+          </div>
+          <ul>
+            <% for (let i = 0; i < data.lastestNews.news.length; i++) { %>
+              <li class="flex-xs">
+                <div class="image">
+                  <a href="/news/<%= data.lastestNews.news[i].id %>">
+                    <picture width="95" height="95" class="mapping-small lazysize"
+                      style="padding-bottom: 100%;">
+                      <img src="<%= data.lastestNews.image[i].url %>"
+                        alt="President Donald Trump" title="President Donald Trump"
+                        class="mapping-small lazysize lazyloaded"
+                        style="position: absolute; height: 100%; width: auto; max-width: none;"
+                      >
+                    </picture>
+                  </a></div>
+                <div class="info"><a href="/news/<%= data.lastestNews.news[i].id %>">
+                  <%= data.lastestNews.news[i].topic %>
+                </a></div>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

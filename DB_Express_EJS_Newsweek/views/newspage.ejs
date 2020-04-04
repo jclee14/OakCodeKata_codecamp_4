@@ -1,0 +1,198 @@
+<% layout('template') -%>
+
+<div id="main-section" class="container-fluid">
+   <div class="row">
+      <div class="page-content col-md-8">
+         <div id="block-system-main" class="block block-system" data-gtm-action="Main_Page_Content">
+            <div class="content">
+               <article class="node node-article flc clearfix">
+                  <header class="article-header">
+                     <div class="category"><a href="#"><%= data.news.tags[0].name %></a></div>
+                     <h1 class="title"><%= data.news.topic %></h1>
+                     <div class="byline">
+                        By <span class="author"> <span>
+                              <a href="#" class="author-name" rel="author"> <span><%= data.news.author.name %></span></a>
+                           </span> </span>
+                        <time datetime="<%= data.news.date %>" data-timestamp="1585917224"> On <%= data.news.date %>
+                        </time>
+                        <time datetime="<%= data.news.date %>" data-timestamp="1585922231"></time></div>
+                  </header>
+                  <div class="article-content" id="v_article">
+                     <figure class="imageBox v_text">
+                        <div class="innerBox">
+                           <picture class="mapping-embed lazysize" style="cursor: zoom-in;">
+                              <img
+                                 class="mapping-embed lazysize imgPhoto full lazyloaded" id="i1578796"
+                                 data-src="<%= data.image.url %>"
+                                 alt="Donald Trump win re-election amid high unemployment"
+                                 title="Donald Trump win re-election amid high unemployment"
+                                 src="<%= data.image.url %>"
+                              >
+                           </picture>
+                           <figcaption class="caption">
+                              <span class="cap"><%= data.image.description %>"</span>
+                           </figcaption>
+                        </div>
+                     </figure>
+                     <div class="social-share flex-xs flex-wrap ai-c">
+                        <div class="block-title">Share</div>
+                        <a href="#"
+                           class="genericon genericon-facebook-alt" target="_blank"></a>
+                        <a href="#"
+                           class="genericon genericon-twitter" target="_blank"></a>
+                        <a href="#"
+                           class="genericon genericon-tumblr" target="_blank"></a>
+                        <a href="#"
+                           class="genericon genericon-linkedin" target="_blank"></a>
+                        <a class="genericon genericon-pinterest" rel="nofollow" target="_blank"
+                           style="background-color:#c8232c;" data-pin-do="buttonPin"
+                           href="#"
+                           data-pin-custom="true"></a><a
+                           href="#"
+                           class="genericon genericon-reddit" target="_blank"></a>
+                        <a href="#"
+                           class="genericon genericon-mail" target="_blank"></a>
+                     </div>
+                     <div class="filed-under flex-xs flex-wrap ai-c"><a href="#" class="a-cat"><%= data.news.tags[0].name %></a>
+                        <% if(data.news.tags.length > 1) { %>
+                           <% for (let i = 1 ; i < data.news.tags.length ; i++) { %>
+                              <a href="#" class="topic"><span><%= data.news.tags[i].name %></span></a>
+                           <% } %>
+                        <% }  %>
+                     </div>
+                     <div class="article-body v_text">
+                        <p><%= data.news.content %></p>
+                     </div>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </div>
+      <div class="page-sidebar col-md-4" style="position: static;">
+         <div id="block-opinion">
+            <div class="feature subfeature">
+               <div class="block-title">
+                  <a href="#">OPINION</a>
+               </div>
+               <ul>
+                  <% for (let i = 0; i < data.opinionNews.news.length ; i++) { %>
+                     <li class="flex-xs">
+                        <div class="image headshot">
+                           <a href="/news/<%= data.opinionNews.news[i].id %>">
+                              <picture width="63" height="63" style="padding-bottom: 100%;">
+                                 <img
+                                    data-src="https://d.newsweek.com/en/full/1568478/bonnie-kristian.png?w=63&amp;h=63&amp;f=ca92d03f69e06f6dd117bf04cef90475"
+                                    alt="Bonnie Kristian" title="Bonnie Kristian" width="63" height="63" class="lazyloaded"
+                                    style="position: absolute;"
+                                    src="https://d.newsweek.com/en/full/1568478/bonnie-kristian.png?w=63&amp;h=63&amp;f=ca92d03f69e06f6dd117bf04cef90475">
+                              </picture>
+                           </a></div>
+                        <div class="info">
+                           <a href="/news/<%= data.opinionNews.news[i].id %>">
+                              <%= data.opinionNews.news[i].topic %>
+                           </a>
+                           <div class="byline"> By
+                              <%= data.opinionNews.news[i].author.name %>
+                           </div>
+                        </div>
+                     </li>
+                  <% } %>
+               </ul>
+            </div>
+            <div class="the-debate">
+               <div class="subfeature">
+                  <div class="block-title">
+                     <a href="#">The debate</a></div>
+                  <div class="debate-item c-r">
+                     <div class="flex-xs ai-c">
+                        <div class="image">
+                           <a href="/news/<%= data.debateNews.news[0].id %>">
+                              <picture width="95" height="95" class="mapping-small" style="padding-bottom: 100%;">
+                                 <img data-src="<%= data.debateNews.image[0].url %>" alt="Joe Biden " title="Joe Biden "
+                                    width="95" height="95" class="lazyloaded"
+                                    style="position: absolute; height: 100%; width: auto; max-width: none;"
+                                    src="<%= data.debateNews.image[0].url %>">
+                              </picture>
+                           </a></div>
+                        <div class="info"><a href="/news/<%= data.debateNews.news[0].id %>">
+                              <%= data.debateNews.news[0].topic %>
+                           </a></div>
+                     </div>
+                     <div class="byline flex-xs ai-c">
+                        <div class="f1"> <span>By</span>
+                           <a href="#" rel="author" class="author-name"><%= data.debateNews.news[0].author.name %></a>
+                        </div>
+                        <div class="fn image headshot">
+                           <a href="#">
+                              <picture width="63" height="63" style="padding-bottom: 100%;">
+                                 <img
+                                    data-src="https://d.newsweek.com/en/full/1528785/roff-new.png?w=150&amp;h=150&amp;f=0992b2cf5c54139a019181659687bf9a"
+                                    alt="roff-new" title="roff-new" width="150" height="150" class="lazyloaded"
+                                    style="position: absolute;"
+                                    src="https://d.newsweek.com/en/full/1528785/roff-new.png?w=150&amp;h=150&amp;f=0992b2cf5c54139a019181659687bf9a">
+                              </picture>
+                           </a></div>
+                     </div>
+                  </div>
+                  <div class="c-vs">VS</div>
+                  <div class="debate-item c-b">
+                     <div class="flex-xs ai-c">
+                        <div class="image">
+                           <a href="/news/<%= data.debateNews.news[1].id %>">
+                              <picture width="95" height="95" class="mapping-small" style="padding-bottom: 100%;">
+                                 <img data-src="<%= data.debateNews.image[1].url %>" alt="Joe Biden and Bernie Sanders"
+                                    title="Joe Biden and Bernie Sanders" width="95" height="95" class="lazyloaded"
+                                    style="position: absolute; height: 100%; width: auto; max-width: none;"
+                                    src="<%= data.debateNews.image[1].url %>">
+                              </picture>
+                           </a></div>
+                        <div class="info"><a href="/news/<%= data.debateNews.news[1].id %>">
+                              <%= data.debateNews.news[1].topic %>
+                           </a></div>
+                     </div>
+                     <div class="byline flex-xs ai-c">
+                        <div class="f1"> <span>By</span>
+                           <%= data.debateNews.news[1].author.name %>
+                        </div>
+                        <div class="fn image headshot">
+                           <a href="#">
+                              <picture width="63" height="63" style="padding-bottom: 100%;">
+                                 <img
+                                    data-src="https://d.newsweek.com/en/full/1565352/aimee-allison.png?w=150&amp;h=150&amp;f=ae41d00ed12c8a0c6447a34ea3da29d0"
+                                    alt="Aimee Allison " title="Aimee Allison " width="150" height="150"
+                                    class="lazyloaded" style="position: absolute;"
+                                    src="https://d.newsweek.com/en/full/1565352/aimee-allison.png?w=150&amp;h=150&amp;f=ae41d00ed12c8a0c6447a34ea3da29d0">
+                              </picture>
+                           </a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="block-subfeatured">
+            <div class="feature subfeature">
+               <div class="block-title">
+                  <a href="#">LATEST NEWS</a>
+               </div>
+               <ul>
+                  <% for (let i = 0; i < data.lastestNews.news.length; i++) { %>
+                  <li class="flex-xs">
+                     <div class="image">
+                        <a href="/news/<%= data.lastestNews.news[i].id %>">
+                           <picture width="95" height="95" class="mapping-small lazysize" style="padding-bottom: 100%;">
+                              <img src="<%= data.lastestNews.image[i].url %>" alt="President Donald Trump"
+                                 title="President Donald Trump" class="mapping-small lazysize lazyloaded"
+                                 style="position: absolute; height: 100%; width: auto; max-width: none;">
+                           </picture>
+                        </a></div>
+                     <div class="info"><a href="/news/<%= data.lastestNews.news[i].id %>">
+                           <%= data.lastestNews.news[i].topic %>
+                        </a></div>
+                  </li>
+                  <% } %>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
