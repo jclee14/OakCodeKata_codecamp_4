@@ -1,0 +1,80 @@
+h1 {
+  background-color: #3b3636;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+}
+
+.sample-form {
+  background-color: #deb887;
+  margin: 0;
+}
+
+input[type=text], input[type=number] {
+  margin: 8px 0 8px 10px;
+  width: 50%;
+  border-radius: 3px;
+  height: 25px;
+  font-weight: 700;
+}
+
+.radiobutton {
+  margin-left: 10px;
+  height: 20px;
+}
+
+.dest-label {
+  font-weight: 600;
+  margin: 10px;
+}
+
+#destination {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.diet-title {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.diet-list {
+  margin-left: 30px;
+  padding-bottom: 25px;
+}
+
+input[type=submit] {
+  padding: 10px;
+  width: 100px;
+  margin: 10px;
+  position: relative;
+  left: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.information {
+  background-color: #1e5555;
+  color: #fff;
+}
+
+.information h2 {
+  margin: 10px;
+  padding: 10px;
+  font-weight: 650;
+}
+
+.information p {
+  font-size: 18px;
+  margin-left: 20px;
+  font-style: oblique;
+}
+
+.dietList {
+  margin-left: 30px;
+  padding: 0 0 25px 0;
+}
+
+ul.dietList {
+  list-style: none;
+}
